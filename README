@@ -1,10 +1,13 @@
 Files for the Hack The 6ix presentation, June 5 2018.
 
 ==== Setup ====
+
+# Generate 10M data sample
 mkdir -p data/10M
 time go run generator.go -n 100000 > data/10M/server_1.log
 time for i in {2..100}; do cp data/10M/server_1.log data/10M/server_$i.log; done
 
+# Generate 300M data sample
 mkdir -p data/300M
 time for i in {1..300}; do go run generator.go -r -n 1000000 > data/300M/server_$i.log; done
 
