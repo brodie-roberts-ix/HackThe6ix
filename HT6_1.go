@@ -27,7 +27,7 @@ func main() {
 
 /*
 	Structure:
-		read() --rawData--> parse() --parsedData--> aggregate() --processedData--> write()
+		list() -filePaths-> read() -rawData-> parse() -parsedData-> aggregate() -processedData-> write()
 */
 func processDataFolder(folder string) {
 	timer := time.Now()
