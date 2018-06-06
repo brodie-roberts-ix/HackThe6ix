@@ -13,7 +13,7 @@ mkdir -p data/10M
 time go run generator.go -n 100000 > data/10M/server_1.log
 time for i in {2..100}; do cp data/10M/server_1.log data/10M/server_$i.log; done
 
-# Generate 300M data sample
+# Generate 300M data sample (>20 minutes)
 mkdir -p data/300M
 time for i in {1..300}; do go run generator.go -r -n 1000000 > data/300M/server_$i.log; done
 ```
@@ -82,7 +82,7 @@ go run HT6_5.go -b 64 -c 16 data/10M
 
 ### Slow Commands
 ```
-# Versions of the above commands on the large sample data
+# Versions of the above commands on the large sample data (several >20 minutes)
 go run HT6_1.go data/300M
 go run HT6_2.go data/300M
 go run HT6_3.go -b 64 data/300M
