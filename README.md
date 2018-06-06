@@ -1,5 +1,6 @@
 # Files for presentation "Concurrent Optimization Methods Using Go"
 Written and presented by Brodie Roberts on behalf of Index Excahnge.
+
 Presented at the Hack The 6ix workshop at UWaterloo on June 5, 2018.
 
 # Moved to [Index Exchange's official github](https://github.com/indexexchange/GoOptimizationMethods)
